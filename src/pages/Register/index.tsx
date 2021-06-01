@@ -1,5 +1,8 @@
 import React, { useState } from "react";
 import { Alert, Keyboard, Modal, TouchableWithoutFeedback } from "react-native";
+import Asyncstorage from "@react-native-async-storage/async-storage"
+import uuid from "react-native-uuid"
+import { useNavigation } from "@react-navigation/native"
 
 import { useForm } from "react-hook-form";
 
@@ -41,15 +44,20 @@ export function Register() {
     name: "Categoria",
   });
 
+  const navigation = useNavigation();
+
+  const dataKey = "@gofinances:transactions";
+
   const {
     control,
     handleSubmit,
+    reset,
     formState: { errors },
   } = useForm({
     resolver: yupResolver(schema),
   });
 
-  function handleTransactionTypesSelected(type: "up" | "down") {
+  function handleTransactionTypesSelected(type: "positive" | "negative") {
     setTransactionType(type);
   }
   function handleOpenModal() {
@@ -58,7 +66,7 @@ export function Register() {
   function handleCloseModal() {
     setCategoryModalOpen(false);
   }
-  function handleRegister(form: FormData) {
+  async function handleRegister(form: FormData) {
     if (!trasactionType) {
       return Alert.alert("Selecione o tipo de transação");
     }
@@ -66,14 +74,41 @@ export function Register() {
       return Alert.alert("Seleciona a categoria");
     }
 
-    const data = {
+    const newTransaction = {
+      id: String(uuid.v4()),
       name: form.name,
       amount: form.amount,
-      trasactionType,
+      type:trasactionType,
       category: category.key,
+      date: new Date()
     };
-    console.log(data);
+
+    try {
+      const data = await Asyncstorage.getItem(dataKey);
+      const currentData = data ? JSON.parse(data) : [];
+
+      const dataFormated = [
+        ...currentData,
+        newTransaction
+      ]
+
+      await Asyncstorage.setItem(dataKey, JSON.stringify(dataFormated));
+
+      reset()
+      setTransactionType("");
+      setCategory({
+        key: "category",
+        name: "Categoria",
+      })
+      navigation.navigate("Listagem")
+
+    } catch (error) {
+      console.log(error);
+      Alert.alert("Não foi possível salvar")
+
+    }
   }
+
   return (
     <TouchableWithoutFeedback onPress={Keyboard.dismiss}>
       <Container>
@@ -100,16 +135,16 @@ export function Register() {
             />
             <TransactionTypes>
               <TransactionTypeButton
-                onPress={() => handleTransactionTypesSelected("up")}
+                onPress={() => handleTransactionTypesSelected("positive")}
                 title="Income"
                 type="up"
-                isActive={trasactionType === "up"}
+                isActive={trasactionType === "positive"}
               />
               <TransactionTypeButton
-                onPress={() => handleTransactionTypesSelected("down")}
+                onPress={() => handleTransactionTypesSelected("negative")}
                 title="Outcome"
                 type="down"
-                isActive={trasactionType === "down"}
+                isActive={trasactionType === "negative"}
               />
             </TransactionTypes>
 
