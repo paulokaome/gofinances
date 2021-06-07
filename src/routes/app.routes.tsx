@@ -20,7 +20,7 @@ export function AppRoutes() {
         labelPosition: "beside-icon",
         style: {
           paddingVertical: Platform.OS === "ios" ? 20 : 0,
-          height: 58,
+          height: Platform.OS === "ios" ? 80 : 58,
         },
       }}
     >
