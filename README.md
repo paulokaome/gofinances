@@ -1,61 +1,31 @@
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; <img width="600" 
+  src="https://www.imagemhost.com.br/images/2021/07/20/GoFinances-Ignite-Copy.png"  alt="Happy">
+  
+# 💰Projeto Gofinances
+ <div>  
+<p >O Gofinances foi criado para facilitar a administração pessoal de cada indivíduo , nela você poderá adicionar suas despesas e controlar toda sua rende de forma simples e segura, usando um conjunto de ferramentas como React Native e expo para facilitar o desenvolvimento e trazer total compatibilidade entre plataformas , usar ANDROID ou IOS pra nós não faz a menor diferença , o nosso objetivo e trazer fluidez , segurança e uma interface aonde você se sinta livre para voar. </p>
+</div>
+
+## 📳 Construído pensando em você...!
+
+Usando Styled Components para dar mais autoridade aos estilos, nosso projeto usa o armazenamento do próprio dispositivo para armazenar os dados e deixar tudo ainda mais fluido para o usuário final , DATEFNS é uma LIB sensacional para lidar com datas e assim tornar mais tudo mais ágil , baixe agora e tenha o controle de sua vida financeira na palma de suas mãos .
+
+## 🚀Algumas Tecnologias usadas no projeto...
+
+ - Expo
+ - Styled Components
+ - Axios
+ - DateFNS
+ - AsyncStorage
+ - Typescript
+
+## 📲Rodando o Projeto
+
+🎇Clone o projeto e de um Npm install ,Instale o Expo Globalmente e logo em seguida rode o comando Expo Start.
 
 
-## 💻 Projeto GoFinances
+📫Entre em contato  comigo .... 👇
 
-Desenvolver um aplicativo mobile voltado para controle de finanças de forma Prática e Intuitiva, em React Native .
+[![Linkedin Badge](https://img.shields.io/badge/-Paulo%20Azevedo-0077B5?style=flat-square&logo=Linkedin&logoColor=white&link=https://www.linkedin.com/in/pauloemidio/)  ](https://www.linkedin.com/in/pauloemidio/)
+[![Gmail Badge](https://img.shields.io/badge/-pauloemidioazevedo@gmail.com-D14836?style=flat-square&logo=Gmail&logoColor=white&link=mailto:pauloemidioazevedo@gmail.com)](mailto:pauloemidioazevedo@gmail.com)
 
-
-### Funcionalidades
-
-- [x] **Listagem das Entradas e Saídas**: Listar valores direto do AsyncStorage.
-
-- [x] **Selecionar tipo de Entrada e Saída**: Método para adicionar Entrada ou Saída de acordo com seu tipo.
-
-- [x] **Calculo Automático**: Método para calcular os valores baseado no total de entrada menos o total de saída.
-
-- [x] **Efeito no Cartão do Valores**: No Dashboard da aplicação você já tem o valor total de saída e entrada mais o valor atual.
-
-- [x] **Resumo Simplicado**: Na aba Resumo você tem acesso a quantidade de saída separada por tipo e por cor.
-
-- [x] **Cadastro de Valores**: Na aba Cadastro você adiciona uma transição por tipo e o calculo já se faz automático.
-
-
-### Conceitos abordados
-
-- Uso de flexbox para alinhar e ajustar elementos no App
-
-- Manipulação de pixel com o uso da Lib react responsive fonts.
-
-- Consumo de dados direto do AsyncStorage.
-
-- Conceitos de tipagem no typescript.
-
-- Configuração de fonte local.
-
-- Criando tema global de cores com o `Theme` do [styled-components](https://www.styled-components.com/).
-
-## :GoFinances: Tecnologias
-
--  [React](https://pt-br.reactjs.org/)
--  [Styled-components](https://www.styled-components.com/)
--  [React-Icons](https://react-icons.netlify.com/)
--  [AsyncStorage](https://github.com/react-native-async-storage/async-storage)
--  [React Router](https://reactrouter.com/web/guides/quick-start)
--  [TypeScript](https://www.typescriptlang.org/)
-
-## 📥 Instalação e execução
-
-Faça um clone desse repositório e acesse o diretório.
-
-```bash
-$ git clone https://github.com/paulokaome/gofinances
-```
-
-```bash
-# Instalando as dependências
-$ yarn
-
-# Executanto aplicação
-$ expo start
-
-```
