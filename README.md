@@ -3,7 +3,7 @@
   
 # 💰Projeto Gofinances
  <div>  
-<p >O Gofinances foi criado para facilitar a administração pessoal de cada indivíduo , nela você poderá adicionar suas despesas e controlar toda sua rende de forma simples e segura, usando um conjunto de ferramentas como React Native e expo para facilitar o desenvolvimento e trazer total compatibilidade entre plataformas , usar ANDROID ou IOS pra nós não faz a menor diferença , o nosso objetivo e trazer fluidez , segurança e uma interface aonde você se sinta livre para voar. </p>
+<p >O Gofinances foi criado para facilitar a administração pessoal de cada indivíduo , nela você poderá adicionar suas despesas e controlar toda sua renda de forma simples e segura, usando um conjunto de ferramentas como React Native com Expo para facilitar o desenvolvimento e trazer total compatibilidade entre plataformas , usar ANDROID ou IOS pra nós não faz a menor diferença , o nosso objetivo e trazer fluidez , segurança e uma interface aonde você se sinta livre para voar. </p>
 </div>
 
 ## 📳 Construído pensando em você...!
